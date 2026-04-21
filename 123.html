@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>生態綠領論壇特輯｜來羽林聊天 EP.53–55</title>
+  <meta name="description" content="2026動物行為研討會「生態綠領論壇」現場錄音。三集特輯深入探討生態綠領職涯、開發案生態管理與生態創業之道。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green-dark:   #2d5a27;
+      --green-mid:    #4a8a3f;
+      --green-light:  #7ab648;
+      --green-pale:   #e8f4e0;
+      --green-bg:     #f4f9f1;
+      --gold:         #c8a84b;
+      --text-dark:    #1e2d1c;
+      --text-mid:     #3d5238;
+      --text-light:   #6b8063;
+      --white:        #ffffff;
+      --border:       #cce0c0;
+      --radius:       12px;
+      --shadow:       0 4px 20px rgba(45,90,39,0.10);
+      --shadow-hover: 0 8px 32px rgba(45,90,39,0.18);
+    }
+
+    body {
+      font-family: 'Noto Sans TC', 'PingFang TC', 'Heiti TC', sans-serif;
+      background: var(--green-bg);
+      color: var(--text-dark);
+      line-height: 1.75;
+      font-size: 15px;
+    }
+
+    /* ── Header ── */
+    .page-header {
+      background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-mid) 60%, var(--green-light) 100%);
+      color: var(--white);
+      text-align: center;
+      padding: 56px 24px 52px;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .event-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 20px;
+      padding: 4px 18px;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      margin-bottom: 18px;
+    }
+    .page-header h1 {
+      font-size: clamp(22px, 4vw, 34px);
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      line-height: 1.3;
+      margin-bottom: 14px;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .page-header .subtitle {
+      font-size: 14px;
+      opacity: 0.88;
+      max-width: 560px;
+      margin: 0 auto 28px;
+      font-weight: 300;
+    }
+    .ep-range-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--gold);
+      color: #fff;
+      padding: 7px 22px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      box-shadow: 0 3px 12px rgba(200,168,75,0.4);
+    }
+
+    /* ── Main container ── */
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+    }
+
+    /* ── Intro strip ── */
+    .intro-strip {
+      background: var(--white);
+      border-left: 5px solid var(--green-mid);
+      border-radius: var(--radius);
+      padding: 22px 28px;
+      margin: 36px 0 32px;
+      box-shadow: var(--shadow);
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+    }
+    .intro-strip .icon {
+      font-size: 32px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .intro-strip p {
+      font-size: 14px;
+      color: var(--text-mid);
+      line-height: 1.8;
+    }
+    .intro-strip strong { color: var(--green-dark); }
+
+    /* ── Section label ── */
+    .section-label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: var(--green-mid);
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* ── Episode cards ── */
+    .episodes-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      margin-bottom: 40px;
+    }
+
+    .ep-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      transition: box-shadow 0.25s, transform 0.25s;
+      border: 1px solid var(--border);
+    }
+    .ep-card:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-2px);
+    }
+
+    .ep-card-header {
+      display: flex;
+      align-items: stretch;
+      gap: 0;
+    }
+    .ep-number-bar {
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      background: var(--green-dark);
+      color: var(--white);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      padding: 14px 10px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 36px;
+    }
+    .ep-card-top {
+      flex: 1;
+      padding: 20px 22px 16px;
+      border-bottom: 1px solid var(--green-pale);
+    }
+    .ep-meta-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+    .ep-num-tag {
+      background: var(--green-pale);
+      color: var(--green-dark);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 12px;
+      letter-spacing: 0.05em;
+    }
+    .ep-date {
+      font-size: 12px;
+      color: var(--text-light);
+    }
+    .ep-duration {
+      font-size: 12px;
+      color: var(--text-light);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .ep-duration::before { content: '🎧'; font-size: 11px; }
+    .ep-title {
+      font-size: clamp(14px, 2.2vw, 16px);
+      font-weight: 700;
+      color: var(--green-dark);
+      line-height: 1.5;
+      margin-bottom: 8px;
+    }
+    .ep-tagline {
+      font-size: 12px;
+      color: var(--text-light);
+      font-style: italic;
+    }
+
+    /* Guests */
+    .ep-guests {
+      padding: 14px 22px;
+      border-bottom: 1px solid var(--green-pale);
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .guest-chip {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--green-pale);
+      border-radius: 8px;
+      padding: 7px 14px 7px 10px;
+      font-size: 12.5px;
+      line-height: 1.4;
+      flex: 1;
+      min-width: 200px;
+    }
+    .guest-chip .avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--green-mid);
+      color: var(--white);
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .guest-chip .info strong {
+      display: block;
+      font-size: 13px;
+      color: var(--green-dark);
+      font-weight: 700;
+    }
+    .guest-chip .info span {
+      font-size: 11px;
+      color: var(--text-light);
+    }
+
+    /* Description */
+    .ep-desc {
+      padding: 16px 22px;
+      font-size: 13.5px;
+      color: var(--text-mid);
+      line-height: 1.85;
+      border-bottom: 1px solid var(--green-pale);
+    }
+    .ep-desc .highlight-item {
+      margin-bottom: 8px;
+      padding-left: 6px;
+    }
+    .ep-desc .highlight-item:last-child { margin-bottom: 0; }
+    .ep-desc .hl-icon { margin-right: 6px; }
+
+    /* Listen buttons */
+    .ep-listen {
+      padding: 14px 22px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .listen-label {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--text-light);
+      letter-spacing: 0.06em;
+      margin-right: 2px;
+      flex-shrink: 0;
+    }
+    .btn-listen {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--green-dark);
+      color: var(--white);
+      text-decoration: none;
+      font-size: 12.5px;
+      font-weight: 600;
+      padding: 8px 18px;
+      border-radius: 20px;
+      transition: background 0.2s, transform 0.15s;
+      letter-spacing: 0.02em;
+    }
+    .btn-listen:hover {
+      background: var(--green-mid);
+      transform: translateY(-1px);
+    }
+    .btn-listen.secondary {
+      background: transparent;
+      color: var(--green-dark);
+      border: 1.5px solid var(--green-mid);
+    }
+    .btn-listen.secondary:hover {
+      background: var(--green-pale);
+    }
+
+    /* ── About the forum ── */
+    .about-section {
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      padding: 28px 30px;
+      margin-bottom: 32px;
+    }
+    .about-section h2 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--green-dark);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .about-section p {
+      font-size: 13.5px;
+      color: var(--text-mid);
+      line-height: 1.85;
+    }
+
+    /* ── Podcast footer ── */
+    .podcast-footer {
+      background: var(--green-dark);
+      border-radius: var(--radius);
+      padding: 28px 30px;
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+    .podcast-footer img.cover {
+      width: 80px;
+      height: 80px;
+      border-radius: 10px;
+      object-fit: cover;
+      flex-shrink: 0;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    }
+    .podcast-footer .pf-info { flex: 1; min-width: 200px; }
+    .podcast-footer .pf-info h3 {
+      color: var(--white);
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .podcast-footer .pf-info p {
+      color: rgba(255,255,255,0.7);
+      font-size: 12.5px;
+      line-height: 1.6;
+      margin-bottom: 14px;
+    }
+    .platform-links {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .btn-platform {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(255,255,255,0.12);
+      color: var(--white);
+      text-decoration: none;
+      font-size: 11.5px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.25);
+      transition: background 0.2s;
+    }
+    .btn-platform:hover { background: rgba(255,255,255,0.22); }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .page-header { padding: 40px 20px 36px; }
+      .intro-strip { flex-direction: column; gap: 8px; }
+      .ep-card-header { flex-direction: column; }
+      .ep-number-bar {
+        writing-mode: horizontal-tb;
+        min-width: unset;
+        padding: 8px 18px;
+        font-size: 10px;
+      }
+      .podcast-footer { flex-direction: column; text-align: center; }
+      .platform-links { justify-content: center; }
+      .guest-chip { min-width: 100%; }
+      .ep-guests { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══ PAGE HEADER ═══ -->
+<header class="page-header">
+  <div class="event-badge">🌿 2026 動物行為研討會 現場錄音</div>
+  <h1>生態綠領論壇特輯</h1>
+  <p class="subtitle">從職涯探索、開發案實戰，到生態創業——三位生態工作者的第一線分享</p>
+  <div class="ep-range-badge">🎙 來羽林聊天 EP.53 · EP.54 · EP.55</div>
+</header>
+
+<!-- ═══ MAIN CONTENT ═══ -->
+<div class="container">
+
+  <!-- Intro strip -->
+  <div class="intro-strip">
+    <div class="icon">🌱</div>
+    <p>
+      2026年動物行為研討會「<strong>生態綠領論壇</strong>」特邀多位生態領域實務工作者現身說法，
+      探討讀生態出路何在、如何在開發案中做好生態管理，以及如何把生態知識轉化為可持續的事業。
+      以下三集為論壇現場錄音，由羽林生態製作發行。
+    </p>
+  </div>
+
+  <!-- ──────────── EPISODES ──────────── -->
+  <div class="section-label">三集節目</div>
+  <div class="episodes-grid">
+
+    <!-- ── EP.53 ── -->
+    <article class="ep-card">
+      <div class="ep-card-header">
+        <div class="ep-number-bar">EP.53</div>
+        <div class="ep-card-top">
+          <div class="ep-meta-row">
+            <span class="ep-num-tag">特輯 1／3</span>
+            <span class="ep-date">2026 年 3 月 5 日</span>
+          </div>
+          <div class="ep-title">
+            讀生態畢業能幹嘛？<br>連大企業都在找的「生態綠領」崛起！
+          </div>
+          <div class="ep-tagline">生態綠領論壇特輯 第一集</div>
+        </div>
+      </div>
+
+      <div class="ep-guests">
+        <div class="guest-chip">
+          <div class="avatar">黃</div>
+          <div class="info">
+            <strong>黃于玻</strong>
+            <span>生態專業技術服務商業同業公會 理事長</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ep-desc">
+        <div class="highlight-item">
+          <span class="hl-icon">🌿</span>「生態綠領」究竟是什麼？為什麼連大企業都搶著要？本集由公會理事長黃于玻親自解析生態人才的職涯版圖——從生態調查、環評到企業ESG，生態技術正悄悄成為顯學。
+        </div>
+        <div class="highlight-item">
+          <span class="hl-icon">🎓</span>讀生態還是「餓死的科系」嗎？聽聽公會如何為生態從業者建立專業認證，讓野調、保育、諮詢等工作有了更穩固的行業地位。
+        </div>
+        <div class="highlight-item">
+          <span class="hl-icon">💼</span>對想進入生態行業的年輕人，理事長給出了哪些建議？論壇現場的精彩對話，盡收這一集。
+        </div>
+      </div>
+
+      <div class="ep-listen">
+        <span class="listen-label">立即收聽</span>
+        <a class="btn-listen" href="https://solink.soundon.fm/episode/d6b4d6a0-bfef-400f-856c-698dcdc15bf3" target="_blank" rel="noopener">
+          ▶ SoundOn 收聽
+        </a>
+        <a class="btn-listen secondary" href="https://player.soundon.fm/p/23b36aa4-70f0-43c0-b9ee-59931343b013/episodes/d6b4d6a0-bfef-400f-856c-698dcdc15bf3" target="_blank" rel="noopener">
+          播放器連結
+        </a>
+      </div>
+    </article>
+
+    <!-- ── EP.54 ── -->
+    <article class="ep-card">
+      <div class="ep-card-header">
+        <div class="ep-number-bar">EP.54</div>
+        <div class="ep-card-top">
+          <div class="ep-meta-row">
+            <span class="ep-num-tag">特輯 2／3</span>
+            <span class="ep-date">2026 年 3 月 16 日</span>
+          </div>
+          <div class="ep-title">
+            別等頭洗一半才後悔！<br>從怪手進場到魚電共生，開發案不「翻車」的生存指南
+          </div>
+          <div class="ep-tagline">生態綠領論壇特輯 第二集</div>
+        </div>
+      </div>
+
+      <div class="ep-guests">
+        <div class="guest-chip">
+          <div class="avatar">蘇</div>
+          <div class="info">
+            <strong>蘇維翎</strong>
+            <span>觀察家生態顧問有限公司 協理</span>
+          </div>
+        </div>
+        <div class="guest-chip">
+          <div class="avatar">林</div>
+          <div class="info">
+            <strong>林雅玲</strong>
+            <span>漢林生態顧問有限公司 總經理</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ep-desc">
+        <div class="highlight-item">
+          <span class="hl-icon">🔧</span>開發案與生態保育之間，衝突真的無可避免嗎？兩位在顧問公司第一線打滾多年的講者，從怪手已經進場的緊急應變，到提前介入的迴避策略，分享如何讓案子不翻車。
+        </div>
+        <div class="highlight-item">
+          <span class="hl-icon">⚡</span>魚電共生、光電與濕地並存——這些聽起來矛盾的組合，在實務上如何操作？本集有深度分析與真實案例。
+        </div>
+        <div class="highlight-item">
+          <span class="hl-icon">🗺️</span>想在生態顧問業做出成績，不能只懂野外調查，更要懂法規、懂開發方，聽兩位前輩聊聊在這行「生存」的心法。
+        </div>
+      </div>
+
+      <div class="ep-listen">
+        <span class="listen-label">立即收聽</span>
+        <a class="btn-listen" href="https://solink.soundon.fm/episode/6a97fd6b-333c-4364-b85a-7d15b50a9787" target="_blank" rel="noopener">
+          ▶ SoundOn 收聽
+        </a>
+        <a class="btn-listen secondary" href="https://player.soundon.fm/p/23b36aa4-70f0-43c0-b9ee-59931343b013/episodes/6a97fd6b-333c-4364-b85a-7d15b50a9787" target="_blank" rel="noopener">
+          播放器連結
+        </a>
+      </div>
+    </article>
+
+    <!-- ── EP.55 ── -->
+    <article class="ep-card">
+      <div class="ep-card-header">
+        <div class="ep-number-bar">EP.55</div>
+        <div class="ep-card-top">
+          <div class="ep-meta-row">
+            <span class="ep-num-tag">特輯 3／3</span>
+            <span class="ep-date">2026 年 4 月 2 日</span>
+            <span class="ep-duration">46 分 06 秒</span>
+          </div>
+          <div class="ep-title">
+            誰說做生態會餓死？<br>看老鷹公主的千萬創業路／夜探三仙台的「生態好生意」！
+          </div>
+          <div class="ep-tagline">生態綠領論壇特輯 第三集</div>
+        </div>
+      </div>
+
+      <div class="ep-guests">
+        <div class="guest-chip">
+          <div class="avatar">🦅</div>
+          <div class="info">
+            <strong>林惠珊／老鷹公主</strong>
+            <span>昕昌生態負責人（新南生態科研公司創辦人）</span>
+          </div>
+        </div>
+        <div class="guest-chip">
+          <div class="avatar">🐍</div>
+          <div class="info">
+            <strong>范中衍</strong>
+            <span>羽林生態 副總經理</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ep-desc">
+        <div class="highlight-item">
+          <span class="hl-icon">🦅</span><strong>老鷹公主 林惠珊｜從研究助理到千萬營收</strong>
+          曾為支持老鷹研究而兼職網拍假髮求生，如今創立年收千萬的新南生態科研公司。她投入農田保育，藉由開發文創商品與大眾溝通。她鼓勵生態人培養斜槓技能，別把自己定位成「只會收資料的人」，轉譯生態價值才是關鍵！
+        </div>
+        <div class="highlight-item">
+          <span class="hl-icon">🐍</span><strong>羽林生態 范中衍｜夜探三仙台的觀光密碼</strong>
+          打破觀光與生態衝突的迷思，證明兩者能共存共榮！他分享尋找東海岸夜觀亮點，將三仙台海蛇與富岡陸寄居蟹轉化為熱門夜遊行程，藉由培訓在地居民成為監測解說員，不僅創造地方收入，更讓他們成為守護環境的第一線生力軍。
+        </div>
+        <div class="highlight-item">
+          <span class="hl-icon">💡</span>無論工作多辛苦，請記得熱愛生態的初心——累了就去安排一趟賞鳥吧！
+        </div>
+      </div>
+
+      <div class="ep-listen">
+        <span class="listen-label">立即收聽</span>
+        <a class="btn-listen" href="https://solink.soundon.fm/episode/52ff1006-efb5-452f-a0e3-620121964b4b" target="_blank" rel="noopener">
+          ▶ SoundOn 收聽
+        </a>
+        <a class="btn-listen secondary" href="https://player.soundon.fm/p/23b36aa4-70f0-43c0-b9ee-59931343b013/episodes/52ff1006-efb5-452f-a0e3-620121964b4b" target="_blank" rel="noopener">
+          播放器連結
+        </a>
+      </div>
+    </article>
+
+  </div><!-- /episodes-grid -->
+
+  <!-- ──────────── ABOUT THE FORUM ──────────── -->
+  <div class="section-label">關於論壇</div>
+  <div class="about-section">
+    <h2>🌿 生態綠領論壇</h2>
+    <p>
+      「生態綠領論壇」是 2026 年動物行為研討會的特色場次，由生態專業技術服務商業同業公會協辦、來羽林聊天podcast錄製。
+      論壇邀請在生態產業第一線耕耘的實務工作者，從職涯發展、專案管理到自主創業，
+      用最直接的工作經驗，回答生態人最常問的問題——我能做什麼？我能怎麼做得更好？
+      我能不能靠生態養活自己，甚至做出一番事業？三集特輯完整收錄論壇現場精彩對話，
+      歡迎轉發給每一位對生態工作有興趣的朋友。
+    </p>
+  </div>
+
+  <!-- ──────────── PODCAST FOOTER ──────────── -->
+  <div class="section-label">關於節目</div>
+  <div class="podcast-footer">
+    <img class="cover"
+         src="https://www.ff-eco.com/wp-content/uploads/2024/10/1727877412418-7819e6f7-0c82-4144-a559-1ea4a6e20d9e-300x300.jpeg"
+         alt="來羽林聊天">
+    <div class="pf-info">
+      <h3>來羽林聊天 Podcast</h3>
+      <p>
+        羽林生態團隊夥伴，邀請生態領域的好朋友們，一起來羽林聊天——<br>
+        聊野外經驗、聊保育議題、聊故事八卦、聊理念願景……。聽大家閒聊，瞭解生態工作的點點滴滴。
+      </p>
+      <div class="platform-links">
+        <a class="btn-platform" href="https://podcasts.apple.com/podcast/1771706982" target="_blank" rel="noopener">🍎 Apple Podcasts</a>
+        <a class="btn-platform" href="https://open.spotify.com/show/5NBos8dg23oqJzTZrywtNt" target="_blank" rel="noopener">🎵 Spotify</a>
+        <a class="btn-platform" href="https://www.youtube.com/@FF-Eco/podcasts" target="_blank" rel="noopener">▶ YouTube</a>
+        <a class="btn-platform" href="https://podcast.kkbox.com/tw/channel/CtwGlwbWTsZ5Y-1W40" target="_blank" rel="noopener">🎶 KKBOX</a>
+        <a class="btn-platform" href="https://player.soundon.fm/p/23b36aa4-70f0-43c0-b9ee-59931343b013" target="_blank" rel="noopener">🔊 SoundOn</a>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /container -->
+
+</body>
+</html>
